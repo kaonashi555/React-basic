@@ -1,4 +1,6 @@
 
+const dummyProductData=[ 'Product 1', 'Product 2'];
+
 function FuctionalComponent(){
     return(
         <div>
