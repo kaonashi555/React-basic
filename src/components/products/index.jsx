@@ -1,15 +1,28 @@
 import ProductItem from "./components/product-item";
 
-const dummyProductData = ["Product 1", "Produc 2"];
 
-function ProductList(){
-     return <div> <h4> ECommerece Project</h4> 
+
+// directly destructring here..otherwise the code will be like that:
+// function ProductList({props}){
+//      const {name,city}=props;   
+//      return 
+//       <div> 
+//         <h3> Name is {name} </h3>
+//          <h3> She is from {city} </h3> 
+//       </div>
+// N.B. must pass the "key name" in the argument & while maping item
+function ProductList({name,city,datalist}){
+     return <div> <h2> ECommerece Project</h2> 
+     <h3> Name is {name} </h3>
+     <h3> She is from {city} </h3>
+
      {/* <ProductItem/> */}
 
+     {/* to render a list of data --> */}
      <ul>
           {
-               dummyProductData.map((item,index)=>(
-                    <li key={index}>{item}</li>
+               datalist.map((item,index)=>(
+                    <ProductItem singleProductItem={item} key={index}/>
                ))
           }
      </ul>

@@ -1,13 +1,14 @@
 function ButtonComponent(){
-    return <bottun>Click it!</bottun>;
+    return <bottun>Click</bottun>;
 }
 
 // they are in the same File,so no import export is need to be done for the ProductItem to use ButtonComponent
 
-function ProductItem(){
+//here we passed a list of data (singleProductItem) from one component to another component
+function ProductItem({singleProductItem}){
     return (
     <div> 
-        <p>Product 1</p>
+        <p>{singleProductItem}</p>
         <ButtonComponent/>
      </div>)
 }
