@@ -1,6 +1,6 @@
 import ProductItem from "./components/product-item";
 
-
+import "./style.css";
 
 // directly destructring here..otherwise the code will be like that:
 // function ProductList({props}){
@@ -12,9 +12,8 @@ import ProductItem from "./components/product-item";
 //       </div>
 // N.B. must pass the "key name" in the argument & while maping item
 function ProductList({name,city,datalist}){
-     return <div> <h2> ECommerece Project</h2> 
-     <h3> Name is {name} </h3>
-     <h3> She is from {city} </h3>
+     return <div> <h2 className="title"> ECommerece Project</h2> 
+     <h3 className="info"> Name is {name}. She is from {city} </h3>
 
      {/* <ProductItem/> */}
 
