@@ -12,6 +12,7 @@ import "./style.css";
 //       </div>
 // N.B. must pass the "key name" in the argument & while maping item
 function ProductList({name,city,datalist}){
+     // Styling react app:using external stylesheet (style.css)
      return <div> <h2 className="title"> ECommerece Project</h2> 
      <h3 className="info"> Name is {name}. She is from {city} </h3>
 
