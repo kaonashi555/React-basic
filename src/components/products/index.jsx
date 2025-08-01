@@ -14,12 +14,16 @@ import "./style.css";
 //       </div>
 // N.B. must pass the "key name" in the argument & while maping item
 function ProductList({name,city,datalist}){
-     const flag = true;
-     const renderTextBlock = flag ? (
+     const flag = false;
+     let renderTextBlock = null;
+     if (flag){
+          renderTextBlock = (
                <h3 className="info"> Name : {name}. City : {city} </h3>
-          ): (
-               <h3>Hello world!</h3>
-          )
+          );
+     }else{
+          renderTextBlock = <h3>Hello world!</h3>
+     }
+
      
 
      // Styling react app:using external stylesheet (style.css)
