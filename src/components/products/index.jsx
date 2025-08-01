@@ -2,7 +2,7 @@ import ProductItem from "./components/product-item";
 
 import "./style.css";
 
-const flag = false;
+
 
 // directly destructring here..otherwise the code will be like that:
 // function ProductList({props}){
@@ -14,16 +14,20 @@ const flag = false;
 //       </div>
 // N.B. must pass the "key name" in the argument & while maping item
 function ProductList({name,city,datalist}){
-     // Styling react app:using external stylesheet (style.css)
-     return <div> <h2 className="title"> ECommerece Project</h2> 
-     {
-          flag ? (
+
+     const flag = false;
+     function renderTextBlock (getFlag){
+     return getFlag ? (
                <h3 className="info"> Name : {name}. City : {city} </h3>
           ): (
                <h3>Hello world!</h3>
           )
      }
-     
+
+
+     // Styling react app:using external stylesheet (style.css)
+     return <div> <h2 className="title"> ECommerece Project</h2> 
+     {renderTextBlock(flag)}
 
      {/* <ProductItem/> */}
 
