@@ -2,6 +2,8 @@ import ProductItem from "./components/product-item";
 
 import "./style.css";
 
+const flag = false;
+
 // directly destructring here..otherwise the code will be like that:
 // function ProductList({props}){
 //      const {name,city}=props;   
@@ -14,7 +16,14 @@ import "./style.css";
 function ProductList({name,city,datalist}){
      // Styling react app:using external stylesheet (style.css)
      return <div> <h2 className="title"> ECommerece Project</h2> 
-     <h3 className="info"> Name is {name}. She is from {city} </h3>
+     {
+          flag ? (
+               <h3 className="info"> Name : {name}. City : {city} </h3>
+          ): (
+               <h3>Hello world!</h3>
+          )
+     }
+     
 
      {/* <ProductItem/> */}
 
