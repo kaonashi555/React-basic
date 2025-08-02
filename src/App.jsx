@@ -12,9 +12,9 @@ function App() {
   return (
       <div>
         <h1> React JS Concepts</h1>
-        {/* <ClassBasedComponent/>
-        <FuctionalComponent/> */}
-        <ProductList datalist={dummyProductData} name="Afia" city="Kishoreganj"/>
+        <ClassBasedComponent/>
+        {/* <FuctionalComponent/>
+        <ProductList datalist={dummyProductData} name="Afia" city="Kishoreganj"/> */}
       </div>
   );
 }
