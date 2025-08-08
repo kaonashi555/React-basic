@@ -19,6 +19,16 @@ class ClassBasedComponent extends Component{
         });
     }
 
+    //componentDidMount
+    componentDidMount(){
+        console.log("This is called first time on page load");
+
+        this.setState({
+            showText: !this.state.showText,
+            changeColor: !this.state.chargeColor,
+        });
+    }
+
 
 
     render(){
