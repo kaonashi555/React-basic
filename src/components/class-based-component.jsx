@@ -25,14 +25,20 @@ class ClassBasedComponent extends Component{
 
         this.setState({
             showText: !this.state.showText,
-            changeColor: !this.state.chargeColor,
+            changeColor: !this.state,
         });
     }
 
+    //componentDidUpate
+    // componentDidUpdate(prevProps,prevState){
+    //     console.log(prevProps,prevState);
+    // }
+    componentDidUpdate(prevProps,prevState){
+        console.log(prevState, this.state);
+    }
 
-
+    
     render(){
-        console.log(this.state);
 
         const{showText,changeColor}=this.state
         return(
